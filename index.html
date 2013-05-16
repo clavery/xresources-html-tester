@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>.Xresources / .Xdefaults tester</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+    <style>
+      .output {
+        width: 660px;
+        height: 420px;
+        background: #000;
+        color: #fff;
+        margin-bottom: 40px;
+        position: relative;
+        font-family:Menlo,Monaco,Consolas,"Courier New",monospace;
+        padding: 10px;
+      }
+      .error {
+        border: 1px solid red;
+      }
+      .prompt {
+        position: absolute;
+        bottom: 10px;
+      }
+
+      .grid span {
+        display: block;
+        width: 80px;
+        height: 20px;
+        clear: both;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+          <a class="brand" href="#">Xresources Tester</a>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span12">
+          <h1>Xresources Tester</h1>
+          <p>Preview Xresources terminal colors by pasting in the definitions here:</p>
+          <p><small>only supports colors defined as HEX RBG values (ie. #fa1232)</small></p>
+          <form>
+            <div class="control-group">
+              <label class="control-label" for="xresources">XResources File</label>
+              <div class="controls">
+                <textarea rows="12" cols="80" name="xresources" class="span6" id="xresources">
+*background: #222222;
+*foreground: #aeaeae;
+
+!black
+*color0: #000000
+*color8: #666666
+
+!red
+*color1: #D23D3D
+*color9: #E84F4F
+
+!green
+*color2: #B7CE42
+*color10: #BDE077
+
+!yellow
+*color3: #F6784F
+*color11: #F07746
+
+!blue
+*color4: #7DC1CF
+!*color4: #66AABB
+*color12: #4E9FB1
+!*color12: #AACCBB
+
+!magenta
+*color5: #B7416E
+*color13: #E16A98
+
+!cyan
+*color6: #6D878D
+*color14: #42717B
+
+!white
+*color7: #F2F1F0
+*color15: #F2F1F0
+                </textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span12">
+
+          <h2>Preview</h2>
+
+          <div class="output">
+
+            <table border="0" class="grid">
+            </table>
+
+            <div class="prompt">$ ls -al</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+
+  </body>
+</html>
